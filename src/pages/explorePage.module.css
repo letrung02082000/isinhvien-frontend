@@ -1,0 +1,50 @@
+.discoverContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
+}
+.switchButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.switchButton button {
+  width: 50%;
+  padding: 0.5rem;
+  background-color: white;
+  color: rgb(71, 71, 71);
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.switchButton .active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+/* 
+.voucherList {
+  height: 5rem;
+} */
+
+.loginContainer {
+  background-color: white;
+  /* min-height: 60vh; */
+  padding: 10rem 1rem 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginContainer button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  border-width: 0;
+  color: white;
+}

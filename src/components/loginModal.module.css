@@ -1,0 +1,32 @@
+.loginButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginModal {
+  background-color: white;
+  width: 85%;
+  height: 50%;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.loginBackdrop {
+  position: absolute;
+  background-color: rgb(206, 206, 206, 0.5);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.closeModalButton {
+  display: flex;
+  justify-content: end;
+  padding: 0.7rem;
+}

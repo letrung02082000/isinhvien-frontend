@@ -1,0 +1,27 @@
+.voucherList {
+  border-top: 1px solid #ccc;
+  background-color: var(--white);
+  padding: 1rem 0;
+}
+
+.voucherListTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.voucherListTitle h5 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.listVertical {
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
+.listVertical img {
+  width: 100%;
+}

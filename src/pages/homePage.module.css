@@ -1,0 +1,49 @@
+.homeContainer {
+  min-height: 150vh;
+  position: relative;
+}
+
+.homeSliderContainer {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.categorySliderContainer {
+  width: 95%;
+  margin: 1rem auto;
+}
+
+.hotSliderContainer {
+  width: 95%;
+  margin: 1rem auto;
+}
+
+.searchInput {
+  width: 95%;
+  background-color: white;
+  display: flex;
+  padding: 0.1rem 0 !important;
+  margin: 0 auto 1rem;
+  border-radius: 5px;
+}
+
+.logoContainer {
+  position: relative;
+}
+
+.searchIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0.75rem;
+  right: 1.5rem;
+  background-color: rgb(226, 225, 225);
+  border-radius: 50px;
+}
+
+.searchIcon svg {
+  width: 100%;
+  height: 100%;
+  color: var(--primary);
+}

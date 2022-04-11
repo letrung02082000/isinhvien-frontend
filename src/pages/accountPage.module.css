@@ -1,0 +1,54 @@
+.accountPageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginModal {
+  background-color: white;
+  width: 85%;
+  height: 50%;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.loginBackdrop {
+  position: absolute;
+  background-color: rgb(206, 206, 206, 0.5);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeModalButton {
+  display: flex;
+  justify-content: end;
+  padding: 0.7rem;
+}
+
+.welcomeTitle {
+  background-color: var(--primary);
+  padding: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.buttonOutlined {
+  border: 1px solid var(--white);
+  background-color: transparent;
+  padding: 0.4rem;
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: bold;
+  margin: 0 0.5rem;
+}

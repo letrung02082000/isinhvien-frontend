@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--white);
+  /* position: relative; */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 80%;
+}
+
+.firstRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.firstRow p {
+  /* text-align: center; */
+}
+
+.secondRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.date {
+  /* width: 100%; */
+  height: fit-content;
+}
+
+.name {
+  width: 25%;
+}
+
+.tel {
+  width: 10%;
+}
+
+.payment {
+  width: 20%;
+}
+
+.paid {
+  width: 10%;
+}
+
+.processState {
+  width: 20%;
+}
+
+.button {
+  text-decoration: none;
+  padding: 0.3rem;
+  margin: 0.5rem 1rem;
+  border-radius: 5px;
+  color: var(--primary);
+  font-weight: bold;
+  border: 1px solid var(--primary);
+  width: 10rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--primary);
+}
+
+.buttonSelected {
+  background-color: var(--primary);
+}
+
+.copyButton {
+  background-color: aquamarine;
+  border-width: 0;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.zalo {
+  border-width: 0;
+  border-radius: 5px;
+  /* padding: 0.5rem; */
+  font-size: 0.9rem;
+}
+
+.driveIcon {
+  width: 2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.thirdRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.thirdRow p {
+  margin: 0;
+}
+
+.messageSent {
+  padding: 0.3rem 1.2rem;
+  background: white;
+  margin-left: 2rem;
+}

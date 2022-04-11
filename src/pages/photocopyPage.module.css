@@ -1,0 +1,74 @@
+.container {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 100%;
+}
+
+.imgContainer img {
+  width: 100%;
+}
+
+.photocopyItemContainer {
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.photocopyItemContainer img {
+  width: 25%;
+}
+
+.bodyContainer {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btnContainer button {
+  margin: 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.listContainer {
+  display: flex;
+  width: 95%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 16px -1px rgba(0, 36, 33, 0.55);
+  box-shadow: 0px 0px 16px -1px rgba(0, 36, 33, 0.55);
+}
+
+.bodyContainer p {
+  margin: 0;
+}
+
+.photocopyName {
+  font-weight: bold;
+}
+
+.orderContainer {
+  width: 95%;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+.orderContainer p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,89 @@
+.loginContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary);
+}
+
+.header {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 20vh;
+}
+
+.header p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--white);
+  margin: 0;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  padding: 1rem;
+}
+
+.inputContainer {
+  padding: 0 0.5rem;
+  display: flex;
+}
+
+.input {
+  border-width: 0px;
+  width: 100%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 25px;
+  width: 90%;
+  min-height: 50vh;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--white);
+}
+
+.error {
+  padding: 1rem;
+}
+
+.loginBtn {
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  border-width: 0;
+  border-radius: 5px;
+}
+
+.signupBtn {
+  background-color: var(--white);
+  color: var(--primary);
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+}
+
+.horizonContainer {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.horizonContainer hr {
+  width: 35%;
+}
+
+.horizonContainer p {
+  color: var(--light-gray);
+}

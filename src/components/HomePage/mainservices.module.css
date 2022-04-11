@@ -1,0 +1,42 @@
+.itemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.itemContainer {
+  /* padding: 0 1rem; */
+  display: flex;
+  flex: 1 0 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  width: auto;
+  cursor: pointer;
+}
+
+.itemContainer div {
+  /* border: solid 1px black; */
+  /* padding: 1.1rem; */
+  border-radius: 50px;
+  /* background-color: rgb(0, 140, 255); */
+  width: fit-content;
+}
+
+.itemContainer p {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  max-width: 5rem;
+  text-align: center;
+}
+
+.mainIcon {
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  background-color: white;
+}

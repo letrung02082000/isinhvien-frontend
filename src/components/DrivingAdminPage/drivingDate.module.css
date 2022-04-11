@@ -1,0 +1,24 @@
+.dateContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.dateButton {
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  margin: 0.5rem 2rem;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--white);
+  color: var(--primary);
+  font-weight: bold;
+  min-width: 5rem;
+}
+
+.addDate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
