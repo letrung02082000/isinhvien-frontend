@@ -1,20 +1,20 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { IoShirtOutline } from 'react-icons/io5';
-import { IoMdPrint } from 'react-icons/io';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { IoShirtOutline } from "react-icons/io5";
+import { IoMdPrint } from "react-icons/io";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import {
   FaBusAlt,
   FaMotorcycle,
   FaPrint,
   FaSwimmingPool,
   FaHome,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
-import styles from './mainservices.module.css';
+import styles from "./mainservices.module.css";
 
-import { useSelector } from 'react-redux';
-import { selectUser } from '../../store/userSlice';
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../store/userSlice";
 
 function MainServices(props) {
   const history = useHistory();
@@ -23,9 +23,9 @@ function MainServices(props) {
 
   const handleBuyTicketButton = () => {
     if (!user.isLoggedIn) {
-      navigateTo('/login', { message: 'Vui lòng đăng nhập để tiếp tục!' });
+      navigateTo("/login", { message: "Vui lòng đăng nhập để tiếp tục!" });
     } else {
-      navigateTo('/pool-ticket');
+      navigateTo("/pool-ticket");
     }
   };
 
@@ -37,13 +37,13 @@ function MainServices(props) {
     <div className={styles.itemsContainer}>
       <div
         className={styles.itemContainer}
-        onClick={() => navigateTo('/pool-ticket')}
+        onClick={() => navigateTo("/pool-ticket")}
       >
         <div>
           {/* <FaSwimmingPool size={40} style={{ color: 'white' }} /> */}
           <img
-            src='/main-icon/pool2.png'
-            alt='pool'
+            src="/main-icon/pool2.png"
+            alt="pool"
             className={styles.mainIcon}
           />
         </div>
@@ -55,24 +55,24 @@ function MainServices(props) {
       </div>
       <div
         className={styles.itemContainer}
-        onClick={() => navigateTo('/driving-test')}
+        onClick={() => navigateTo("/driving-test")}
       >
         <div>
           {/* <FaMotorcycle size={40} className={styles.mainIcon} /> */}
           <img
-            src='/main-icon/motobike.png'
-            alt='pool'
+            src="/main-icon/motobike.png"
+            alt="pool"
             className={styles.mainIcon}
           />
         </div>
         <p>Thi sát hạch lái xe</p>
       </div>
-      <div className={styles.itemContainer} onClick={() => navigateTo('/jobs')}>
+      <div className={styles.itemContainer} onClick={() => navigateTo("/jobs")}>
         <div>
           {/* <AiOutlineArrowRight size={40} style={{ color: 'white' }} /> */}
           <img
-            src='/main-icon/job2.png'
-            alt='pool'
+            src="/main-icon/job2.png"
+            alt="pool"
             className={styles.mainIcon}
           />
         </div>
@@ -82,13 +82,13 @@ function MainServices(props) {
       </div>
       <div
         className={styles.itemContainer}
-        onClick={() => navigateTo('/photocopies')}
+        onClick={() => navigateTo("/photocopies")}
       >
         <div>
           {/* <IoMdPrint size={40} style={{ color: 'white' }} /> */}
           <img
-            src='/main-icon/photocopy2.png'
-            alt='pool'
+            src="/main-icon/photocopy2.png"
+            alt="pool"
             className={styles.mainIcon}
           />
         </div>
@@ -96,13 +96,13 @@ function MainServices(props) {
       </div>
       <div
         className={styles.itemContainer}
-        onClick={() => navigateTo('/bicycles')}
+        onClick={() => navigateTo("/bicycles")}
       >
         <div>
           {/* <FaHome size={40} style={{ color: 'white' }} /> */}
           <img
-            src='/main-icon/bicycle.jpeg'
-            alt='bicycle'
+            src="/main-icon/bicycle.jpeg"
+            alt="bicycle"
             className={styles.mainIcon}
           />
         </div>
@@ -114,13 +114,13 @@ function MainServices(props) {
       </div>
       <div
         className={styles.itemContainer}
-        onClick={() => navigateTo('/uniforms')}
+        onClick={() => navigateTo("/uniforms")}
       >
         <div>
           {/* <IoShirtOutline size={40} style={{ color: 'white' }} /> */}
           <img
-            src='/main-icon/uniform2.png'
-            alt='pool'
+            src="/main-icon/uniform2.png"
+            alt="pool"
             className={styles.mainIcon}
           />
         </div>
@@ -129,13 +129,13 @@ function MainServices(props) {
 
       <div
         className={styles.itemContainer}
-        onClick={() => navigateTo('/maintain')}
+        onClick={() => navigateTo("/maintain")}
       >
         <div>
           {/* <AiOutlineArrowRight size={40} style={{ color: 'white' }} /> */}
           <img
-            src='/main-icon/health2.png'
-            alt='pool'
+            src="/main-icon/health2.png"
+            alt="pool"
             className={styles.mainIcon}
           />
         </div>
@@ -146,13 +146,13 @@ function MainServices(props) {
 
       <div
         className={styles.itemContainer}
-        onClick={() => navigateTo('/maintain')}
+        onClick={() => navigateTo("/maintain")}
       >
         <div>
           {/* <AiOutlineArrowRight size={40} style={{ color: 'white' }} /> */}
           <img
-            src='/main-icon/course.jpg'
-            alt='pool'
+            src="/main-icon/course.jpg"
+            alt="pool"
             className={styles.mainIcon}
           />
         </div>
@@ -161,13 +161,13 @@ function MainServices(props) {
 
       <div
         className={styles.itemContainer}
-        onClick={() => navigateTo('/maintain')}
+        onClick={() => navigateTo("/maintain")}
       >
         <div>
           {/* <AiOutlineArrowRight size={40} style={{ color: 'white' }} /> */}
           <img
-            src='/main-icon/volunteer.jpg'
-            alt='pool'
+            src="/main-icon/volunteer.jpg"
+            alt="pool"
             className={styles.mainIcon}
           />
         </div>

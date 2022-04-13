@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useLocation } from "react-router-dom";
 
-import TitleBar from '../components/TitleBar';
+import TitleBar from "../components/TitleBar";
 
-import styles from './drivingRegisterPage.module.css';
-import { SearchBar } from '../components/ExplorePage';
+import styles from "./drivingRegisterPage.module.css";
+import { SearchBar } from "./ExplorePage/components";
 
 function DrivingRegisterPage() {
   const { search } = useLocation();
-  const source = new URLSearchParams(search).get('s') || 0;
+  const source = new URLSearchParams(search).get("s") || 0;
 
   const [frontsideName, setFrontsideName] = useState(null);
   const [frontsideFile, setFrontsideFile] = useState(null);
@@ -25,19 +25,19 @@ function DrivingRegisterPage() {
   const [date, setDate] = useState(0);
   const [dateList, setDateList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
   const [searchData, setSearchData] = useState(null);
 
   const imageExtensions = [
-    'image/jpeg',
-    'image/png',
-    'image/svg+xml',
-    'image/webp',
+    "image/jpeg",
+    "image/png",
+    "image/svg+xml",
+    "image/webp",
   ];
 
   useEffect(async () => {
     try {
-      const response = await axios.get('/api/driving/date?formVisible=true');
+      const response = await axios.get("/api/driving/date?formVisible=true");
       let data = response.data.data;
 
       if (data.length > 0) {
@@ -50,10 +50,10 @@ function DrivingRegisterPage() {
 
         setDateList(data);
       } else {
-        alert('Chưa có danh sách ngày thi mới');
+        alert("Chưa có danh sách ngày thi mới");
       }
     } catch (e) {
-      alert('Lỗi: ' + e);
+      alert("Lỗi: " + e);
     }
   }, []);
 
@@ -62,68 +62,68 @@ function DrivingRegisterPage() {
     console.log(dateList[date].date.toLocaleDateString());
     if (!frontsideFile) {
       setIsLoading(false);
-      return alert('Lỗi: Vui lòng tải lên mặt trước cmnd/cccd');
+      return alert("Lỗi: Vui lòng tải lên mặt trước cmnd/cccd");
     }
     if (!backsideFile) {
       setIsLoading(false);
-      return alert('Lỗi: Vui lòng tải lên mặt sau cmnd/cccd');
+      return alert("Lỗi: Vui lòng tải lên mặt sau cmnd/cccd");
     }
     if (!portraitFile) {
       setIsLoading(false);
-      return alert('Lỗi: Vui lòng tải lên ảnh chân dung của bạn');
+      return alert("Lỗi: Vui lòng tải lên ảnh chân dung của bạn");
     }
 
-    const fullname = document.getElementById('formName').value;
-    const tel = document.getElementById('formTel').value;
-    const zalo = document.getElementById('formZalo').value;
-    const feedback = document.getElementById('formFeedback').value;
+    const fullname = document.getElementById("formName").value;
+    const tel = document.getElementById("formTel").value;
+    const zalo = document.getElementById("formZalo").value;
+    const feedback = document.getElementById("formFeedback").value;
     let paidState = isPaid === 0;
 
     if (!fullname || !tel || !zalo) {
       return alert(
-        'Vui lòng nhập đầy đủ: họ tên, số điện thoại và số điện thoại zalo'
+        "Vui lòng nhập đầy đủ: họ tên, số điện thoại và số điện thoại zalo"
       );
     }
 
     const formData = new FormData();
 
-    formData.append('name', fullname);
-    formData.append('tel', tel);
-    formData.append('zalo', zalo);
-    formData.append('frontside', frontsideFile);
-    formData.append('backside', backsideFile);
-    formData.append('portrait', portraitFile);
-    formData.append('receipt', receiptFile);
-    formData.append('isPaid', paidState);
-    formData.append('paymentMethod', paymentMethod);
-    formData.append('feedback', feedback);
-    formData.append('drivingType', drivingType);
-    formData.append('source', source);
+    formData.append("name", fullname);
+    formData.append("tel", tel);
+    formData.append("zalo", zalo);
+    formData.append("frontside", frontsideFile);
+    formData.append("backside", backsideFile);
+    formData.append("portrait", portraitFile);
+    formData.append("receipt", receiptFile);
+    formData.append("isPaid", paidState);
+    formData.append("paymentMethod", paymentMethod);
+    formData.append("feedback", feedback);
+    formData.append("drivingType", drivingType);
+    formData.append("source", source);
 
     if (drivingType === 0) {
-      formData.append('date', dateList[date].date.getTime());
+      formData.append("date", dateList[date].date.getTime());
     }
 
     axios({
-      method: 'post',
-      url: '/api/driving/add',
+      method: "post",
+      url: "/api/driving/add",
       data: formData,
-      headers: { 'Content-Type': 'multipart/form-data' },
+      headers: { "Content-Type": "multipart/form-data" },
     })
       .then((res) => {
         if (res.status === 200) {
           alert(
-            'Đăng ký thành công. Trung tâm sẽ liên hệ với bạn trong thời gian sớm nhất. Nếu bạn cần hỗ trợ thêm, vui lòng liên hệ zalo để được xử lý.'
+            "Đăng ký thành công. Trung tâm sẽ liên hệ với bạn trong thời gian sớm nhất. Nếu bạn cần hỗ trợ thêm, vui lòng liên hệ zalo để được xử lý."
           );
           setIsLoading(false);
         } else {
-          alert('Lỗi: ' + res.data.message);
+          alert("Lỗi: " + res.data.message);
           setIsLoading(false);
         }
       })
       .catch((error) => {
         console.log(error);
-        alert('Lỗi: ' + error);
+        alert("Lỗi: " + error);
         setIsLoading(false);
       });
   };
@@ -150,7 +150,7 @@ function DrivingRegisterPage() {
       setFrontsideName(e.target.files[0].name);
       console.log(e.target.files[0]);
     } else {
-      setFrontsideName('Lỗi: Tệp tải lên không phải là tệp hình ảnh');
+      setFrontsideName("Lỗi: Tệp tải lên không phải là tệp hình ảnh");
     }
   };
   const uploadBackside = (e) => {
@@ -158,7 +158,7 @@ function DrivingRegisterPage() {
       setBacksideFile(e.target.files[0]);
       setBacksideName(e.target.files[0].name);
     } else {
-      setBacksideName('Lỗi: Tệp tải lên không phải là tệp hình ảnh');
+      setBacksideName("Lỗi: Tệp tải lên không phải là tệp hình ảnh");
     }
   };
   const uploadPortrait = (e) => {
@@ -166,7 +166,7 @@ function DrivingRegisterPage() {
       setPortraitFile(e.target.files[0]);
       setPortraitName(e.target.files[0].name);
     } else {
-      setPortraitName('Lỗi: Tệp tải lên không phải là tệp hình ảnh');
+      setPortraitName("Lỗi: Tệp tải lên không phải là tệp hình ảnh");
     }
   };
   const uploadReceipt = (e) => {
@@ -174,7 +174,7 @@ function DrivingRegisterPage() {
       setReceiptFile(e.target.files[0]);
       setReceiptName(e.target.files[0].name);
     } else {
-      setReceiptName('Lỗi: Tệp tải lên không phải là tệp hình ảnh');
+      setReceiptName("Lỗi: Tệp tải lên không phải là tệp hình ảnh");
     }
   };
 
@@ -184,32 +184,32 @@ function DrivingRegisterPage() {
   };
 
   const handleSearchPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       e.preventDefault();
       axios
-        .get('/api/driving/search', { params: { tel: searchValue } })
+        .get("/api/driving/search", { params: { tel: searchValue } })
         .then((res) => {
           const data = res.data.data;
 
           if (data.length === 0) {
-            alert('Không tìm thấy hồ sơ khớp với số điện thoại ' + searchValue);
+            alert("Không tìm thấy hồ sơ khớp với số điện thoại " + searchValue);
           } else {
             setSearchData(data);
           }
         })
         .catch((e) => {
           console.log(e);
-          alert('Không tìm thấy hồ sơ khớp với số điện thoại ' + searchValue);
+          alert("Không tìm thấy hồ sơ khớp với số điện thoại " + searchValue);
         });
     }
   };
 
   return (
     <div className={styles.drivingRegisterContainer}>
-      <TitleBar title='Đăng ký dự thi' navigation='/driving-test' />
+      <TitleBar title="Đăng ký dự thi" navigation="/driving-test" />
       <SearchBar
-        placeholder={'Tra cứu trạng thái hồ sơ'}
-        focusText={'Nhập số điện thoại và nhấn Enter'}
+        placeholder={"Tra cứu trạng thái hồ sơ"}
+        focusText={"Nhập số điện thoại và nhấn Enter"}
         onChange={handleSearchChange}
         onKeyPress={handleSearchPress}
         value={searchValue}
@@ -219,18 +219,18 @@ function DrivingRegisterPage() {
           const date = new Date(child.date);
           const processDate = new Date(date);
           processDate.setDate(date.getDate() - 14);
-          let state = '';
+          let state = "";
 
           if (child.processState == 0) {
-            state = 'Đang chờ xử lý';
+            state = "Đang chờ xử lý";
           } else if (child.processState == 1) {
-            state = 'Đang chờ cập nhật';
+            state = "Đang chờ cập nhật";
           } else if (child.processState == 2) {
-            state = 'Đang chờ thanh toán';
+            state = "Đang chờ thanh toán";
           } else if (child.processState == 3) {
-            state = 'Đã hoàn tất hồ sơ';
+            state = "Đã hoàn tất hồ sơ";
           } else if (child.processState == 4) {
-            state = 'Đã hủy hồ sơ';
+            state = "Đã hủy hồ sơ";
           }
 
           return (
@@ -250,14 +250,14 @@ function DrivingRegisterPage() {
                 }/${processDate.getFullYear()}`}
               </p>
               <p>
-                Vui lòng liên hệ{' '}
+                Vui lòng liên hệ{" "}
                 <a
-                  href='https://zalo.me/0383270434'
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  href="https://zalo.me/0383270434"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   0383.270.434
-                </a>{' '}
+                </a>{" "}
                 để được hỗ trợ trong trường hợp hồ sơ của bạn chưa được xử lý.
               </p>
             </div>
@@ -265,16 +265,16 @@ function DrivingRegisterPage() {
         })}
       <form className={styles.drivingFormContainer}>
         <p style={{ margin: 0 }}>
-          Xem hướng dẫn đăng ký dự thi{' '}
+          Xem hướng dẫn đăng ký dự thi{" "}
           <a
-            href='/driving-instruction'
-            target='_blank'
-            rel='noopener noreferrer'
+            href="/driving-instruction"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             tại đây.
           </a>
         </p>
-        <ul style={{ listStyle: 'none', padding: '0' }}>
+        <ul style={{ listStyle: "none", padding: "0" }}>
           <li>
             Thông tin chuyển khoản:
             <br />- Chủ tài khoản: Nguyễn Ngọc Huân
@@ -285,28 +285,28 @@ function DrivingRegisterPage() {
             với bằng A2
             <br />- Gửi lại ảnh chụp biên lai trong form đăng ký nếu đã chuyển
             khoản.
-            <br />- Gửi lại ảnh chụp biên lai tại Zalo:{' '}
+            <br />- Gửi lại ảnh chụp biên lai tại Zalo:{" "}
             <a
-              href='https://zalo.me/0383270434'
-              target='_blank'
-              rel='noopener noreferrer'
+              href="https://zalo.me/0383270434"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               0383.270.434
-            </a>{' '}
+            </a>{" "}
             nếu đóng sau khi đăng ký.
           </li>
 
           <li>Hoàn thành lệ phí thi trước ngày dự thi 14 ngày.</li>
         </ul>
-        <p style={{ margin: 0, color: ' #ff0000 ' }}>* bắt buộc</p>
+        <p style={{ margin: 0, color: " #ff0000 " }}>* bắt buộc</p>
 
         <div className={styles.formGroup}>
           <label className={styles.formLabel}>Tên của bạn*</label>
           <input
             className={styles.formInput}
-            id='formName'
-            type='text'
-            placeholder='Nhập họ tên đầy đủ, có dấu'
+            id="formName"
+            type="text"
+            placeholder="Nhập họ tên đầy đủ, có dấu"
             required
           />
         </div>
@@ -314,9 +314,9 @@ function DrivingRegisterPage() {
           <label className={styles.formLabel}>Số điện thoại liên hệ*</label>
           <input
             className={styles.formInput}
-            id='formTel'
-            type='text'
-            placeholder='Nhập số điện thoại của bạn'
+            id="formTel"
+            type="text"
+            placeholder="Nhập số điện thoại của bạn"
             required
           />
         </div>
@@ -324,9 +324,9 @@ function DrivingRegisterPage() {
           <label className={styles.formLabel}>Số điện thoại Zalo*</label>
           <input
             className={styles.formInput}
-            id='formZalo'
-            type='text'
-            placeholder='Nhập số điện thoại Zalo của bạn'
+            id="formZalo"
+            type="text"
+            placeholder="Nhập số điện thoại Zalo của bạn"
           />
         </div>
 
@@ -335,10 +335,10 @@ function DrivingRegisterPage() {
           <label className={styles.formUploadButton}>
             <input
               className={styles.formInput}
-              type='file'
-              accept='image/*'
-              id='frontside'
-              name='frontside'
+              type="file"
+              accept="image/*"
+              id="frontside"
+              name="frontside"
               onChange={uploadFrontside}
               required
             />
@@ -353,10 +353,10 @@ function DrivingRegisterPage() {
           <label className={styles.formUploadButton}>
             <input
               className={styles.formInput}
-              type='file'
-              accept='image/*'
-              id='backside'
-              name='backside'
+              type="file"
+              accept="image/*"
+              id="backside"
+              name="backside"
               onChange={uploadBackside}
               required
             />
@@ -368,21 +368,21 @@ function DrivingRegisterPage() {
         </div>
         <div className={styles.formGroup}>
           <label className={styles.formLabel}>
-            Ảnh chụp chân dung* (không chụp ảnh thẻ, xem ảnh mẫu trong hướng dẫn{' '}
+            Ảnh chụp chân dung* (không chụp ảnh thẻ, xem ảnh mẫu trong hướng dẫn{" "}
             <a
-              href='/driving-instruction'
-              target='_blank'
-              rel='noopener noreferrer'
+              href="/driving-instruction"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               tại đây
             </a>
             )
             <br />
-            Xem video hướng dẫn tạo ảnh nền xanh tại{' '}
+            Xem video hướng dẫn tạo ảnh nền xanh tại{" "}
             <a
-              href='https://youtu.be/56xW53bxNLg'
-              target='_blank'
-              rel='noopener noreferrer'
+              href="https://youtu.be/56xW53bxNLg"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               https://youtu.be/56xW53bxNLg
             </a>
@@ -390,10 +390,10 @@ function DrivingRegisterPage() {
           <label className={styles.formUploadButton}>
             <input
               className={styles.formInput}
-              type='file'
-              accept='image/*'
-              id='portrait'
-              name='portrait'
+              type="file"
+              accept="image/*"
+              id="portrait"
+              name="portrait"
               onChange={uploadPortrait}
               required
             />
@@ -409,7 +409,7 @@ function DrivingRegisterPage() {
           <div className={styles.selectContainer}>
             <input
               className={styles.formInput}
-              type='radio'
+              type="radio"
               onChange={() => handleDrivingTypeChange(0)}
               checked={drivingType === 0}
             />
@@ -421,7 +421,7 @@ function DrivingRegisterPage() {
           <div className={styles.selectContainer}>
             <input
               className={styles.formInput}
-              type='radio'
+              type="radio"
               onChange={() => handleDrivingTypeChange(1)}
               checked={drivingType === 1}
             />
@@ -433,7 +433,7 @@ function DrivingRegisterPage() {
           <div className={styles.selectContainer}>
             <input
               className={styles.formInput}
-              type='radio'
+              type="radio"
               onChange={() => handleDrivingTypeChange(2)}
               checked={drivingType === 2}
             />
@@ -453,7 +453,7 @@ function DrivingRegisterPage() {
                 <div className={styles.selectContainer}>
                   <input
                     className={styles.formInput}
-                    type='radio'
+                    type="radio"
                     onChange={() => handleDateChange(index)}
                     checked={date === index}
                   />
@@ -471,7 +471,7 @@ function DrivingRegisterPage() {
           <div className={styles.selectContainer}>
             <input
               className={styles.formInput}
-              type='radio'
+              type="radio"
               onChange={() => handlePaymentMethodChange(0)}
               checked={paymentMethod === 0}
             />
@@ -482,7 +482,7 @@ function DrivingRegisterPage() {
           <div className={styles.selectContainer}>
             <input
               className={styles.formInput}
-              type='radio'
+              type="radio"
               onChange={() => handlePaymentMethodChange(1)}
               checked={paymentMethod === 1}
             />
@@ -496,7 +496,7 @@ function DrivingRegisterPage() {
           <div className={styles.selectContainer}>
             <input
               className={styles.formInput}
-              type='radio'
+              type="radio"
               onChange={() => handleIsPaidChange(0)}
               checked={isPaid == 0}
             />
@@ -506,7 +506,7 @@ function DrivingRegisterPage() {
           <div className={styles.selectContainer}>
             <input
               className={styles.formInput}
-              type='radio'
+              type="radio"
               onChange={() => handleIsPaidChange(1)}
               checked={isPaid == 1}
             />
@@ -520,10 +520,10 @@ function DrivingRegisterPage() {
           <label className={styles.formUploadButton}>
             <input
               className={styles.formInput}
-              type='file'
-              accept='image/*'
-              id='receipt'
-              name='receipt'
+              type="file"
+              accept="image/*"
+              id="receipt"
+              name="receipt"
               onChange={uploadReceipt}
             />
             Tải tệp lên
@@ -535,35 +535,35 @@ function DrivingRegisterPage() {
         </div>
         <div className={styles.formGroup}>
           <label className={styles.formLabel}>Thắc mắc/Góp ý</label>
-          <textarea className={styles.formFeedbackInput} id='formFeedback' />
+          <textarea className={styles.formFeedbackInput} id="formFeedback" />
         </div>
 
         {isLoading ? (
           <>
             <p>
-              Hệ thống đang xử lý, vui lòng chờ trong ít nhất 15 giây {'<3'}
+              Hệ thống đang xử lý, vui lòng chờ trong ít nhất 15 giây {"<3"}
             </p>
             <p className={styles.formSubmitButton}>Đang đăng ký...</p>
           </>
         ) : (
           <button
-            type='button'
+            type="button"
             onClick={handleSubmitButton}
             className={styles.formSubmitButton}
           >
             Đăng ký
           </button>
         )}
-        <p style={{ margin: '1rem 0' }}>
+        <p style={{ margin: "1rem 0" }}>
           Trong quá trình đăng ký, nếu xảy ra lỗi hệ thống, vui lòng chụp màn
-          hình lỗi gửi về Zalo:{' '}
+          hình lỗi gửi về Zalo:{" "}
           <a
             href="href='https://zalo.me/0797324886"
-            target='_blank'
-            rel='noopener noreferrer'
+            target="_blank"
+            rel="noopener noreferrer"
           >
             0797324886
-          </a>{' '}
+          </a>{" "}
           để được hỗ trợ nhanh nhất. Xin cảm ơn.
         </p>
       </form>

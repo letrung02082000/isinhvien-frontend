@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import MainLayout from '../layouts/MainLayout';
-import { useHistory } from 'react-router-dom';
-import classNames from 'classnames';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import MainLayout from "../../layouts/MainLayout";
+import { useHistory } from "react-router-dom";
+import classNames from "classnames";
 
-import styles from './bookGuestHousePage.module.css';
-import { MdArrowBack } from 'react-icons/md';
-import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
+import styles from "./bookGuestHousePage.module.css";
+import { MdArrowBack } from "react-icons/md";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 //redux
-import { useDispatch } from 'react-redux';
-import { updateShow } from '../store/navSlice';
+import { useDispatch } from "react-redux";
+import { updateShow } from "../../store/navSlice";
 
 function BookGuestHousePage() {
   const history = useHistory();
@@ -21,15 +21,15 @@ function BookGuestHousePage() {
   const [rentType, setRentType] = useState(0);
   const [rooms, setRooms] = useState([]);
   const [displayRooms, setDisplayRooms] = useState([]);
-  const [selectedRoom, setSelectedRoom] = useState('');
+  const [selectedRoom, setSelectedRoom] = useState("");
   const [loadingRooms, setLoadingRooms] = useState(true);
-  const [errorMsg, setErrorMsg] = useState('');
+  const [errorMsg, setErrorMsg] = useState("");
   const [endOfRoomList, setEndOfRoomList] = useState(true);
   const displayRoomNumber = 9;
 
   useEffect(() => {
     axios
-      .get('/api/guest-house/query', { params: { type: roomType } })
+      .get("/api/guest-house/query", { params: { type: roomType } })
       .then((response) => {
         let data = response.data.data;
         setRooms(data);
@@ -65,7 +65,7 @@ function BookGuestHousePage() {
       startDate: tmpDate,
     };
 
-    history.push('/guest-house-bill', guestHouseUser);
+    history.push("/guest-house-bill", guestHouseUser);
   };
 
   const selectRoomType = (option) => {
@@ -98,7 +98,7 @@ function BookGuestHousePage() {
       <div className={styles.container}>
         <div className={styles.titleBar}>
           <button onClick={goBack} className={styles.goBackButton}>
-            <MdArrowBack size={25} color='#fff' />
+            <MdArrowBack size={25} color="#fff" />
           </button>
           <p className={styles.pageTitle}>Đặt phòng nhà khách</p>
         </div>
@@ -182,15 +182,15 @@ function BookGuestHousePage() {
                   })}
                 >
                   <p>{child.name}</p>
-                  <p>{child.state === 0 ? 'còn trống' : null}</p>
-                  <p>{child.state === 1 ? 'đã đặt' : null}</p>
-                  <p>{child.state === 2 ? 'đang thuê' : null}</p>
+                  <p>{child.state === 0 ? "còn trống" : null}</p>
+                  <p>{child.state === 1 ? "đã đặt" : null}</p>
+                  <p>{child.state === 2 ? "đang thuê" : null}</p>
                 </div>
               );
             })}
           </div>
           {endOfRoomList ? null : (
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
               <button onClick={loadMoreRooms} className={styles.loadMoreButton}>
                 <IoIosArrowDown />
                 <span>Tải thêm </span>
@@ -200,9 +200,9 @@ function BookGuestHousePage() {
         </div>
         <div
           style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <button className={styles.getBillButton} onClick={getBill}>

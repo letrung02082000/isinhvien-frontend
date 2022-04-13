@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
 //swiper
-import { Pagination, Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/swiper.min.css';
+import { Pagination, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 
 //styles
-import './homeSlider.css';
+import "./homeSlider.css";
 
 //media query
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 function HomeSlider() {
-  const isMobile = useMediaQuery('(max-width: 767px)');
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   return (
     <>
@@ -30,13 +30,13 @@ function HomeSlider() {
         slidesPerView={1}
         loop={true}
         autoHeight={true}
-        className='mySwiper'
+        className="mySwiper"
       >
         <SwiperSlide>
-          <img src='/banner1.jpg' alt='banner' />
+          <img src="/banner1.jpg" alt="banner" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src='/banner2.jpg' alt='banner' />
+          <img src="/banner2.jpg" alt="banner" />
         </SwiperSlide>
         {/* <SwiperSlide>
           <img src='/banner3.jpg' alt='banner' />

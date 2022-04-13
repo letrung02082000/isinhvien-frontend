@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 //swiper
-import { FreeMode } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import 'swiper/swiper-bundle.min.css';
+import { FreeMode } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+import "swiper/swiper-bundle.min.css";
 
 //styles
-import styles from './categorySlider.module.css';
-import { HiOutlineLocationMarker } from 'react-icons/hi';
-import { MdOutlinePool, MdBusiness, MdHouseSiding } from 'react-icons/md';
-import { FaBusAlt, FaMotorcycle } from 'react-icons/fa';
-import { RiPrinterCloudLine } from 'react-icons/ri';
-import { IoIosBicycle } from 'react-icons/io';
+import styles from "./categorySlider.module.css";
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import { MdOutlinePool, MdBusiness, MdHouseSiding } from "react-icons/md";
+import { FaBusAlt, FaMotorcycle } from "react-icons/fa";
+import { RiPrinterCloudLine } from "react-icons/ri";
+import { IoIosBicycle } from "react-icons/io";
 
 //media query
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 function CategorySlider() {
   const history = useHistory();
-  const isMobile = useMediaQuery('(max-width: 767px)');
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   const navigateTo = (url) => {
     history.push(url);
@@ -33,12 +33,12 @@ function CategorySlider() {
         autoHeight={true}
         slidesPerView={4}
         spaceBetween={15}
-        className='mySwiper'
+        className="mySwiper"
       >
         <SwiperSlide>
           <div
             className={styles.itemContainer}
-            onClick={() => navigateTo('/pool-info')}
+            onClick={() => navigateTo("/pool-info")}
           >
             <MdOutlinePool />
             <p>Hồ bơi</p>
@@ -57,7 +57,7 @@ function CategorySlider() {
         <SwiperSlide>
           <div
             className={styles.itemContainer}
-            onClick={() => navigateTo('/bicycles')}
+            onClick={() => navigateTo("/bicycles")}
           >
             <IoIosBicycle />
             <p>Xe đạp</p>
@@ -67,7 +67,7 @@ function CategorySlider() {
         <SwiperSlide>
           <div
             className={styles.itemContainer}
-            onClick={() => navigateTo('/photocopies')}
+            onClick={() => navigateTo("/photocopies")}
           >
             <RiPrinterCloudLine />
             <p>In ấn</p>
@@ -77,7 +77,7 @@ function CategorySlider() {
         <SwiperSlide>
           <div
             className={styles.itemContainer}
-            onClick={() => navigateTo('/driving-test')}
+            onClick={() => navigateTo("/driving-test")}
           >
             <FaMotorcycle />
             <p>Sát hạch</p>

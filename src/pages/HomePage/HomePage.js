@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import MainLayout from '../layouts/MainLayout';
+import React, { useState } from "react";
+import MainLayout from "../../layouts/MainLayout";
 
 //redux
-import { useSelector, useDispatch } from 'react-redux';
-import { selectUser } from '../store/userSlice';
-import { updateShow } from '../store/navSlice';
+import { useSelector, useDispatch } from "react-redux";
+import { selectUser } from "../../store/userSlice";
+import { updateShow } from "../../store/navSlice";
 
-import styles from './homePage.module.css';
-import { BiSearchAlt } from 'react-icons/bi';
+import styles from "./homePage.module.css";
+import { BiSearchAlt } from "react-icons/bi";
 
 //utils
-import useMediaQuery from '../hooks/useMediaQuery';
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 //components
-import HomeSlider from '../components/HomePage/HomeSlider';
+import HomeSlider from "./components/HomeSlider";
 // import HomeLeftNavBar from '../components/HomePage/HomeLeftNavBar';
-import CategorySlider from '../components/HomePage/CategorySlider';
-import HotSlider from '../components/HomePage/HotSlider';
-import MainServices from '../components/HomePage/MainServices';
-import Logo from '../components/Logo';
+import CategorySlider from "./components/CategorySlider";
+import HotSlider from "./components/HotSlider";
+import MainServices from "./components/MainServices";
+import Logo from "../../components/Logo";
 
 //bootstrap
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col } from "react-bootstrap";
 
 const HomePage = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -30,7 +30,7 @@ const HomePage = () => {
   const dispatch = useDispatch();
   dispatch(updateShow(true));
 
-  const isTablet = useMediaQuery('(max-width: 991px)');
+  const isTablet = useMediaQuery("(max-width: 991px)");
   // const isMobile = useMediaQuery('(max-width: 767px)');
   // const isDesktop = useMediaQuery('(min-width: 768px)');
 
@@ -65,8 +65,8 @@ const HomePage = () => {
       <div className={styles.categorySliderContainer}>
         <p
           style={{
-            fontSize: '1.2rem',
-            fontWeight: 'bold',
+            fontSize: "1.2rem",
+            fontWeight: "bold",
           }}
         >
           Loại hình

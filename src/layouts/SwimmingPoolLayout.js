@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import styles from '../pages/swimmingPoolTicketPage.module.css';
-import TitleBar from '../components/TitleBar';
-import { BiSearchAlt } from 'react-icons/bi';
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import styles from "../pages/SwimmingPool/TicketPage/swimmingPoolTicketPage.module.css";
+import TitleBar from "../components/TitleBar";
 
 function SwimmingPoolTutorPage({ children, route }) {
   const history = useHistory();
@@ -13,24 +12,24 @@ function SwimmingPoolTutorPage({ children, route }) {
 
   return (
     <div className={styles.container}>
-      <TitleBar title='Mua vé hồ bơi' />
+      <TitleBar title="Mua vé hồ bơi" />
       <div className={styles.ticketContainer}>
         <div className={styles.headerContainer}>
-          <img src='/poolbanner.jpg' alt='banner' />
+          <img src="/poolbanner.jpg" alt="banner" />
           <div className={styles.seeMoreButtonContainer}>
             <button
               className={styles.seeMoreButton}
               onClick={() => {
-                history.push('/pool-info');
+                history.push("/pool-info");
               }}
             >
               Thông tin hồ bơi
             </button>
             <a
               className={styles.seeMoreButton}
-              target='_blank'
-              rel='noopener noreferer'
-              href='https://zalo.me/g/fpjnye186'
+              target="_blank"
+              rel="noopener noreferer"
+              href="https://zalo.me/g/fpjnye186"
             >
               Tham gia nhóm
             </a>
@@ -52,17 +51,17 @@ function SwimmingPoolTutorPage({ children, route }) {
           <div className={styles.navigationContainer}>
             <button
               className={`${styles.navigationButton} ${
-                route == '/ticket' ? styles.ticketButton : null
+                route == "/ticket" ? styles.ticketButton : null
               }`}
-              onClick={() => onNavigate('/pool-ticket', 0)}
+              onClick={() => onNavigate("/pool-ticket", 0)}
             >
               Mua vé tháng
             </button>
             <button
               className={`${styles.navigationButton} ${
-                route == '/tutor' ? styles.tutorButton : null
+                route == "/tutor" ? styles.tutorButton : null
               }`}
-              onClick={() => onNavigate('/pool-tutor', 1)}
+              onClick={() => onNavigate("/pool-tutor", 1)}
             >
               Đăng ký học bơi
             </button>

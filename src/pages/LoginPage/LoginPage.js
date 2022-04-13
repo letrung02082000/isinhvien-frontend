@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
-import axios from 'axios';
-import { Button, Form } from 'react-bootstrap';
-import MainLayout from '../layouts/MainLayout';
-import GoogleLogin from 'react-google-login';
+import React, { useState } from "react";
+import { useHistory, useLocation } from "react-router-dom";
+import axios from "axios";
+import GoogleLogin from "react-google-login";
 
-import { IoMdClose } from 'react-icons/io';
-import { BiUser, BiLockAlt } from 'react-icons/bi';
+import { IoMdClose } from "react-icons/io";
+import { BiUser, BiLockAlt } from "react-icons/bi";
 
-import styles from './loginPage.module.css';
+import styles from "./loginPage.module.css";
 
 //redux
-import { useDispatch, useSelector } from 'react-redux';
-import { updateUser, selectUser } from '../store/userSlice';
+import { useDispatch, useSelector } from "react-redux";
+import { updateUser, selectUser } from "../../store/userSlice";
 
 const LoginPage = (props) => {
   const history = useHistory();
@@ -21,7 +19,7 @@ const LoginPage = (props) => {
 
   const dispatch = useDispatch();
   const clientId =
-    '1068638586953-fgkf520a6sj0r4kv6epvmnppunfk2t1k.apps.googleusercontent.com';
+    "1068638586953-fgkf520a6sj0r4kv6epvmnppunfk2t1k.apps.googleusercontent.com";
 
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
@@ -32,7 +30,7 @@ const LoginPage = (props) => {
   const responseSuccessGoogle = (response) => {
     console.log(response);
     axios
-      .post('/api/user/google-login', { tokenId: response.tokenId })
+      .post("/api/user/google-login", { tokenId: response.tokenId })
       .then((response) => {
         if (response.status === 200) {
           setIsLoggedIn(true);
@@ -42,15 +40,15 @@ const LoginPage = (props) => {
           const userInfo = {
             id: result.data.id,
             email: result.data.email,
-            avatarUrl: result.data.avatarUrl || 'avatar-default.png',
+            avatarUrl: result.data.avatarUrl || "avatar-default.png",
             name: result.data.name,
           };
 
           console.log(result);
 
-          localStorage.setItem('user-info', JSON.stringify(userInfo));
-          localStorage.setItem('user-jwt-tk', result.data.accessToken);
-          localStorage.setItem('user-jwt-rftk', result.data.refreshToken);
+          localStorage.setItem("user-info", JSON.stringify(userInfo));
+          localStorage.setItem("user-jwt-tk", result.data.accessToken);
+          localStorage.setItem("user-jwt-rftk", result.data.refreshToken);
 
           dispatch(
             updateUser({
@@ -61,12 +59,12 @@ const LoginPage = (props) => {
           history.goBack();
         } else {
           // console.log(response.message);
-          setErrorMsg('Đăng nhập không thành công');
+          setErrorMsg("Đăng nhập không thành công");
         }
       })
       .catch((err) => {
         console.log(err);
-        setErrorMsg('Đăng nhập không thành công');
+        setErrorMsg("Đăng nhập không thành công");
       });
   };
 
@@ -85,7 +83,7 @@ const LoginPage = (props) => {
       setEmail(event.target.value);
       setErrorMsg(null);
     } else {
-      setErrorMsg('Email không hợp lệ');
+      setErrorMsg("Email không hợp lệ");
     }
   };
 
@@ -96,7 +94,7 @@ const LoginPage = (props) => {
       setPassword(event.target.value);
       setErrorMsg(null);
     } else {
-      setErrorMsg('Mật khẩu phải bao gồm chữ cái và số, độ dài: 8-30 ký tự');
+      setErrorMsg("Mật khẩu phải bao gồm chữ cái và số, độ dài: 8-30 ký tự");
     }
   };
 
@@ -104,12 +102,12 @@ const LoginPage = (props) => {
     setIsLogging(true);
 
     const user = {
-      email: document.getElementById('formBasicEmail').value,
-      password: document.getElementById('formBasicPassword').value,
+      email: document.getElementById("formBasicEmail").value,
+      password: document.getElementById("formBasicPassword").value,
     };
 
     try {
-      const response = await axios.post('/api/user/login', user);
+      const response = await axios.post("/api/user/login", user);
 
       if (response.status === 200) {
         setIsLoggedIn(true);
@@ -118,12 +116,12 @@ const LoginPage = (props) => {
         const result = response.data;
         const userInfo = result.data;
 
-        localStorage.setItem('user-jwt-tk', result.data.accessToken);
-        localStorage.setItem('user-jwt-rftk', result.data.refreshToken);
+        localStorage.setItem("user-jwt-tk", result.data.accessToken);
+        localStorage.setItem("user-jwt-rftk", result.data.refreshToken);
 
         delete userInfo.accessToken;
         delete userInfo.refreshToken;
-        localStorage.setItem('user-info', JSON.stringify(userInfo));
+        localStorage.setItem("user-info", JSON.stringify(userInfo));
 
         dispatch(
           updateUser({
@@ -141,9 +139,9 @@ const LoginPage = (props) => {
           error.response.status === 401 ||
           error.response.status === 404)
       ) {
-        setErrorMsg('Email hoặc mật khẩu không đúng');
+        setErrorMsg("Email hoặc mật khẩu không đúng");
       } else {
-        setErrorMsg('Không thể kết nối đến máy chủ. Vui lòng thử lại sau!');
+        setErrorMsg("Không thể kết nối đến máy chủ. Vui lòng thử lại sau!");
       }
 
       setIsLoggedIn(false);
@@ -155,28 +153,28 @@ const LoginPage = (props) => {
     e.preventDefault();
 
     const user = {
-      email: document.getElementById('formBasicEmail').value,
-      password: document.getElementById('formBasicPassword').value,
+      email: document.getElementById("formBasicEmail").value,
+      password: document.getElementById("formBasicPassword").value,
     };
 
     try {
-      const response = await axios.post('/api/user/signup', user);
+      const response = await axios.post("/api/user/signup", user);
 
       if (response.status === 201) {
-        setErrorMsg('Đăng ký thành công! Đang đăng nhập lại...');
+        setErrorMsg("Đăng ký thành công! Đang đăng nhập lại...");
 
-        const loginResponse = await axios.post('/api/user/login', user);
+        const loginResponse = await axios.post("/api/user/login", user);
 
         if (loginResponse.status === 200) {
           const result = loginResponse.data;
           const userInfo = result.data;
 
-          localStorage.setItem('user-jwt-tk', result.data.accessToken);
-          localStorage.setItem('user-jwt-rftk', result.data.refreshToken);
+          localStorage.setItem("user-jwt-tk", result.data.accessToken);
+          localStorage.setItem("user-jwt-rftk", result.data.refreshToken);
 
           delete userInfo.accessToken;
           delete userInfo.refreshToken;
-          localStorage.setItem('user-info', JSON.stringify(userInfo));
+          localStorage.setItem("user-info", JSON.stringify(userInfo));
 
           dispatch(
             updateUser({
@@ -195,13 +193,13 @@ const LoginPage = (props) => {
 
       if (error.response.status == 400 && error.response.data.errorCode == 0) {
         setErrorMsg(
-          'Địa chỉ email đã tồn tại. Vui lòng liên hệ admin để khôi phục lại mật khẩu'
+          "Địa chỉ email đã tồn tại. Vui lòng liên hệ admin để khôi phục lại mật khẩu"
         );
       } else if (
         error.response.status == 400 &&
         error.response.data.errorCode == 1
       ) {
-        setErrorMsg('Mật khẩu phải bao gồm chữ cái và số, độ dài: 8-30 ký tự');
+        setErrorMsg("Mật khẩu phải bao gồm chữ cái và số, độ dài: 8-30 ký tự");
       }
     }
   };
@@ -213,40 +211,40 @@ const LoginPage = (props) => {
       ) : (
         <>
           <div className={styles.header}>
-            <p>{location.state ? location.state.message : 'Xin chào!'}</p>
+            <p>{location.state ? location.state.message : "Xin chào!"}</p>
             <IoMdClose
               size={25}
-              color='white'
+              color="white"
               onClick={goBack}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
             />
           </div>
           <form className={styles.formContainer}>
             <div>
-              <label className={styles.label} for='formBasicEmail'>
+              <label className={styles.label} for="formBasicEmail">
                 Email của bạn
               </label>
               <div className={styles.inputContainer}>
-                <BiUser style={{ padding: '0.3rem' }} size={30} />
+                <BiUser style={{ padding: "0.3rem" }} size={30} />
                 <input
-                  id='formBasicEmail'
-                  type='email'
-                  placeholder='Nhập địa chỉ email'
+                  id="formBasicEmail"
+                  type="email"
+                  placeholder="Nhập địa chỉ email"
                   className={styles.input}
                   onChange={handleEmailChange}
                 />
               </div>
             </div>
             <div>
-              <label className={styles.label} for='formBasicPassword'>
+              <label className={styles.label} for="formBasicPassword">
                 Mật khẩu
               </label>
               <div className={styles.inputContainer}>
-                <BiLockAlt style={{ padding: '0.3rem' }} size={30} />
+                <BiLockAlt style={{ padding: "0.3rem" }} size={30} />
                 <input
-                  id='formBasicPassword'
-                  type='password'
-                  placeholder='Nhập mật khẩu'
+                  id="formBasicPassword"
+                  type="password"
+                  placeholder="Nhập mật khẩu"
                   className={styles.input}
                   onChange={handlePasswordChange}
                 />
@@ -257,21 +255,21 @@ const LoginPage = (props) => {
               <>
                 <button
                   className={styles.loginBtn}
-                  type='button'
+                  type="button"
                   onClick={handleLoginClick}
                 >
                   Đăng nhập
                 </button>
                 <button
                   className={styles.signupBtn}
-                  type='button'
+                  type="button"
                   onClick={handleSignUpClick}
                 >
                   Đăng ký tài khoản
                 </button>
               </>
             ) : (
-              <button className={styles.loginBtn} type='button'>
+              <button className={styles.loginBtn} type="button">
                 Đang đăng nhập...
               </button>
             )}
@@ -282,17 +280,17 @@ const LoginPage = (props) => {
             </div>
             <div
               style={{
-                display: 'flex',
-                justifyContent: 'center',
-                padding: '2rem 0 7rem',
+                display: "flex",
+                justifyContent: "center",
+                padding: "2rem 0 7rem",
               }}
             >
               <GoogleLogin
                 clientId={clientId}
-                buttonText='Đăng nhập bằng Google'
+                buttonText="Đăng nhập bằng Google"
                 onSuccess={responseSuccessGoogle}
                 onFailure={responseFailureGoogle}
-                cookiePolicy={'single_host_origin'}
+                cookiePolicy={"single_host_origin"}
               />
             </div>
           </form>

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import styles from './swimmingPoolTicketPage.module.css';
-import { MdArrowBack } from 'react-icons/md';
-import axios from 'axios';
-import authHeader from '../utils/authHeader';
-import TitleBar from '../components/TitleBar';
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import styles from "./swimmingPoolBillPage.module.css";
+import { MdArrowBack } from "react-icons/md";
+import axios from "axios";
+import authHeader from "../../../utils/authHeader";
+import TitleBar from "../../../components/TitleBar";
 
 function SwimmingPoolTicketPage() {
   const history = useHistory();
@@ -25,7 +25,7 @@ function SwimmingPoolTicketPage() {
     ) {
       axios
         .post(
-          '/api/pool/ticket',
+          "/api/pool/ticket",
           {
             quantity: billState.quantity,
             rentQuantity: billState.rentQuantity,
@@ -35,7 +35,7 @@ function SwimmingPoolTicketPage() {
         )
         .then((res) => {
           console.log(res.data);
-          history.push('/pool-status', { response: res.data });
+          history.push("/pool-status", { response: res.data });
         })
         .catch((error) => {
           console.log(error);
@@ -46,15 +46,15 @@ function SwimmingPoolTicketPage() {
 
   return (
     <div className={styles.container}>
-      <TitleBar title='Mua vé hồ bơi' />
+      <TitleBar title="Mua vé hồ bơi" />
       <div className={styles.ticketContainer}>
         <div className={styles.headerContainer}>
-          <img src='https://i.imgur.com/OoihNw5.jpg' alt='banner' />
+          <img src="https://i.imgur.com/OoihNw5.jpg" alt="banner" />
           <div className={styles.seeMoreButtonContainer}>
             <button
               className={styles.seeMoreButton}
               onClick={() => {
-                history.push('/pool-info');
+                history.push("/pool-info");
               }}
             >
               Thông tin
@@ -62,7 +62,7 @@ function SwimmingPoolTicketPage() {
             <button
               className={styles.seeMoreButton}
               onClick={() => {
-                history.push('/swimming-tutor');
+                history.push("/swimming-tutor");
               }}
             >
               Đăng ký học bơi

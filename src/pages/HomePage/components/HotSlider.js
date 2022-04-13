@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { BsCalendar2Check } from 'react-icons/bs';
-import { BiQrScan } from 'react-icons/bi';
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { BsCalendar2Check } from "react-icons/bs";
+import { BiQrScan } from "react-icons/bi";
 
 //styles
-import './hotSlider.css';
-import styles from './hotSlider.module.css';
+import "./hotSlider.css";
+import styles from "./hotSlider.module.css";
 
 //utils
-import useMediaQuery from '../../hooks/useMediaQuery';
-import classNames from 'classnames';
+import useMediaQuery from "../../../hooks/useMediaQuery";
+import classNames from "classnames";
 
 //redux
-import { useSelector } from 'react-redux';
-import { selectUser } from '../../store/userSlice';
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../store/userSlice";
 
 function HotSlider(props) {
   const history = useHistory();
   const user = useSelector(selectUser);
-  const isMobile = useMediaQuery('(max-width: 767px)');
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   const handleGuestHouseItemClick = () => {
-    history.push('/guest-house');
+    history.push("/guest-house");
 
     // if (!user.isLoggedIn) {
     //   // navigateTo('/login', { message: 'Vui lòng đăng nhập để tiếp tục!' });
@@ -32,9 +32,9 @@ function HotSlider(props) {
 
   const handleQrCodeItemClick = () => {
     if (!user.isLoggedIn) {
-      navigateTo('/login', { message: 'Vui lòng đăng nhập để tiếp tục!' });
+      navigateTo("/login", { message: "Vui lòng đăng nhập để tiếp tục!" });
     } else {
-      history.push('/qrscan');
+      history.push("/qrscan");
     }
   };
 
@@ -44,13 +44,13 @@ function HotSlider(props) {
 
   return (
     <div className={styles.hotSliderContainer}>
-      <div style={{ padding: '0 0.3rem 0 0' }} className={styles.itemContainer}>
-        <div onClick={handleGuestHouseItemClick} style={{ cursor: 'pointer' }}>
+      <div style={{ padding: "0 0.3rem 0 0" }} className={styles.itemContainer}>
+        <div onClick={handleGuestHouseItemClick} style={{ cursor: "pointer" }}>
           <GuestHouseItem />
         </div>
       </div>
-      <div style={{ padding: '0 0 0 0.3rem' }} className={styles.itemContainer}>
-        <div onClick={handleQrCodeItemClick} style={{ cursor: 'pointer' }}>
+      <div style={{ padding: "0 0 0 0.3rem" }} className={styles.itemContainer}>
+        <div onClick={handleQrCodeItemClick} style={{ cursor: "pointer" }}>
           <SwimmingPoolItem />
         </div>
       </div>
@@ -65,7 +65,7 @@ const GuestHouseItem = () => (
     <div className={styles.blurHotItem}>
       <div
         className={styles.hotItemIcon}
-        style={{ backgroundColor: 'rgb(27, 183, 173)' }}
+        style={{ backgroundColor: "rgb(27, 183, 173)" }}
       >
         <BsCalendar2Check size={32} />
       </div>

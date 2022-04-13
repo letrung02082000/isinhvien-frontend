@@ -1,23 +1,23 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import authHeader from '../../utils/authHeader';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import authHeader from "../../../utils/authHeader";
 
-import VoucherCardVertical from './VoucherCardVertical';
+import VoucherCardVertical from "./VoucherCardVertical";
 
-import styles from './voucherList.module.css';
+import styles from "./voucherList.module.css";
 function VoucherListVertical(props) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
-      .get('/api/coupon-user', authHeader())
+      .get("/api/coupon-user", authHeader())
       .then((res) => {
         setData(res.data.data);
       })
       .catch((e) => {
         console.log(e);
         alert(
-          'Không thể tải danh sách ưu đãi của bạn. Vui lòng liên hệ admin để được hỗ trợ nhanh nhất'
+          "Không thể tải danh sách ưu đãi của bạn. Vui lòng liên hệ admin để được hỗ trợ nhanh nhất"
         );
       });
   }, []);

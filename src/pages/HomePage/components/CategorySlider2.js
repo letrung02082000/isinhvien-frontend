@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 //swiper
-import { Grid, FreeMode, Scrollbar } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import 'swiper/swiper-bundle.min.css';
+import { Grid, FreeMode, Scrollbar } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+import "swiper/swiper-bundle.min.css";
 
 //styles
-import './categorySlider2.css';
-import styles from './categorySlider2.module.css';
+import "./categorySlider2.css";
+import styles from "./categorySlider2.module.css";
 
 //media query
-import useMediaQuery from '../../hooks/useMediaQuery';
-import classNames from 'classnames';
+import useMediaQuery from "../../../hooks/useMediaQuery";
+import classNames from "classnames";
 
 function CategorySlider2() {
-  const isMobile = useMediaQuery('(max-width: 767px)');
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   return (
-    <div className={classNames(styles.categoryContainer, 'cate-container')}>
+    <div className={classNames(styles.categoryContainer, "cate-container")}>
       <Swiper
         modules={[Grid, FreeMode, Scrollbar]}
         freeMode={true}
@@ -26,98 +26,98 @@ function CategorySlider2() {
         scrollbar={{ hide: false }}
         grid={{
           rows: 2,
-          fill: 'row',
+          fill: "row",
         }}
         spaceBetween={15}
-        className='mySwiper'
+        className="mySwiper"
       >
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classNames(styles.slideContainer)}>
-            <img src='https://i.imgur.com/ooBldLi.jpg' alt='cover' />
+            <img src="https://i.imgur.com/ooBldLi.jpg" alt="cover" />
             <p>Nhà sàn</p>
           </div>
         </SwiperSlide>
