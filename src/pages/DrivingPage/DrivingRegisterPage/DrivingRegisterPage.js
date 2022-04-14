@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 
-import TitleBar from "../components/TitleBar";
+import TitleBar from "../../../components/TitleBar";
 
 import styles from "./drivingRegisterPage.module.css";
-import { SearchBar } from "./ExplorePage/components";
+import { SearchBar } from "../../ExplorePage/components";
 
 function DrivingRegisterPage() {
   const { search } = useLocation();

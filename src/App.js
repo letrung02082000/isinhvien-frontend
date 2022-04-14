@@ -12,6 +12,19 @@ import {
   SwimmingPoolInfoPage,
   ExplorePage,
   HomePage,
+  JobDetailPage,
+  JobPage,
+  DrivingInstructionPage,
+  DrivingRegisterPage,
+  DrivingTestPage,
+  CouponListPage,
+  CouponPage,
+  CouponScannedPage,
+  PhotocopyDetailPage,
+  PhotocopyPage,
+  BookGuestHousePage,
+  BookGuestHouseStatusPage,
+  SwimmingPoolTourPage,
 } from "./pages";
 
 import NotFound from "./pages/NotFound";
@@ -19,25 +32,12 @@ import AppsPage from "./pages/AppsPage";
 import ProfilePage from "./pages/ProfilePage";
 import ContactPage from "./pages/ContactPage";
 import AccountPage from "./pages/AccountPage";
-import BookGuestHousePage from "./pages/BookGuest/BookGuestHousePage";
 import GuestHouseBillPage from "./pages/GuestHouseBillPage";
-import BookGuestHouseStatusPage from "./pages/BookGuest/BookGuestHouseStatusPage";
 import GuestHouseInfoPage from "./pages/GuestHouseInfoPage";
 import QrScanPage from "./pages/QrScanPage";
-import PhotocopyPage from "./pages/PhotocopyPage";
-import PhotocopyDetailPage from "./pages/PhotocopyDetailPage";
-import JobPage from "./pages/JobPage";
-import DrivingTestPage from "./pages/DrivingTestPage";
-import DrivingRegisterPage from "./pages/DrivingRegisterPage";
 import SupportPage from "./pages/SupportPage";
-import CouponPage from "./pages/CouponPage";
 import MaintainPage from "./pages/MaintainPage";
-import DrivingInstructionPage from "./pages/DrivingInstructionPage";
 import drivingAdminPage from "./admin/DrivingAdminPage";
-import SwimmingPoolTutorPage from "./pages/SwimmingPool/TourPage/SwimmingPoolTutorPage";
-import JobDetailPage from "./pages/JobDetailPage";
-import CouponScannedPage from "./pages/CouponScannedPage";
-import CouponListPage from "./pages/CouponListPage";
 import BicycleAdminPage from "./admin/BicycleAdminPage";
 import BankPage from "./pages/BankPage";
 import BusSurveyPage from "./pages/BusSurveyPage";
@@ -74,7 +74,7 @@ class App extends React.Component {
           />
           <Route exact path="/pool-info" component={SwimmingPoolInfoPage} />
           <Route exact path="/pool-ticket" component={SwimmingPoolTicketPage} />
-          <Route exact path="/pool-tutor" component={SwimmingPoolTutorPage} />
+          <Route exact path="/pool-tutor" component={SwimmingPoolTourPage} />
           <Route exact path="/qrscan" component={QrScanPage} />
           <Route
             exact

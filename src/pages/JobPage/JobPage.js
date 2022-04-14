@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import TitleBar from '../components/TitleBar';
-import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import TitleBar from "../../components/TitleBar";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 
-import styles from './jobPage.module.css';
-import Loading from '../components/Loading';
+import styles from "./jobPage.module.css";
+import Loading from "../../components/Loading";
 
 function JobPage() {
   const history = useHistory();
@@ -12,7 +12,7 @@ function JobPage() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
-      .get('/api/job')
+      .get("/api/job")
       .then((res) => {
         setData(res.data.data);
         setLoading(false);
@@ -26,21 +26,21 @@ function JobPage() {
 
   return (
     <div className={styles.container}>
-      <TitleBar title='Việc làm sinh viên' />
+      <TitleBar title="Việc làm sinh viên" />
       {loading ? <Loading /> : null}
       {data.map((child) => {
         let date = new Date(child.createdAt);
         date = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
-        let state = 'Không có';
+        let state = "Không có";
         if (child.state === 1) {
-          state = 'Đang mở';
+          state = "Đang mở";
         } else if (child.state === 2) {
-          state = 'Đã đóng';
+          state = "Đã đóng";
         }
         return (
           <div className={styles.jobContainer} key={child._id}>
             <div className={styles.imageContainer}>
-              <img alt='image' src={child.banner} />
+              <img alt="image" src={child.banner} />
             </div>
             <div className={styles.infoContainer}>
               <p className={styles.jobTitle}>{child.title}</p>
@@ -51,10 +51,10 @@ function JobPage() {
                 style={
                   child.state == 2
                     ? {
-                        margin: '0.5rem 0',
-                        backgroundColor: 'rgb(245, 55, 55)',
+                        margin: "0.5rem 0",
+                        backgroundColor: "rgb(245, 55, 55)",
                       }
-                    : { margin: '0.5rem 0' }
+                    : { margin: "0.5rem 0" }
                 }
               >
                 {state}

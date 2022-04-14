@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import styles from "../pages/SwimmingPool/TicketPage/swimmingPoolTicketPage.module.css";
+import styles from "../pages/SwimmingPoolPage/TicketPage/swimmingPoolTicketPage.module.css";
 import TitleBar from "../components/TitleBar";
 
 function SwimmingPoolTutorPage({ children, route }) {

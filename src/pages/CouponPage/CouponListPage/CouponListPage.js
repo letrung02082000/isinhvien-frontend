@@ -2,13 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 import styles from "./couponListPage.module.css";
-import TitleBar from "../components/TitleBar";
-import { VoucherCard } from "./ExplorePage/components";
-import authHeader from "../utils/authHeader";
+import TitleBar from "../../../components/TitleBar";
+import { VoucherCard } from "../../ExplorePage/components";
+import authHeader from "../../../utils/authHeader";
 
 import { useSelector } from "react-redux";
-import { selectUser } from "../store/userSlice";
-import Loading from "../components/Loading";
+import { selectUser } from "../../../store/userSlice";
+import Loading from "../../../components/Loading";
 
 function CouponListPage(props) {
   const user = useSelector(selectUser);

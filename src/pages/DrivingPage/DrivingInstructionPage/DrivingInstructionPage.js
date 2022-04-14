@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useHistory } from 'react-router-dom';
-import TitleBar from '../components/TitleBar';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
+import TitleBar from "../../../components/TitleBar";
 
-import styles from './drivingInstructionPage.module.css';
+import styles from "./drivingInstructionPage.module.css";
 
 function DrivingInstructionPage() {
   const history = useHistory();
@@ -11,7 +11,7 @@ function DrivingInstructionPage() {
 
   useEffect(async () => {
     try {
-      const response = await axios.get('/api/driving/date?formVisible=true');
+      const response = await axios.get("/api/driving/date?formVisible=true");
       let data = response.data.data;
 
       if (data.length > 0) {
@@ -24,35 +24,35 @@ function DrivingInstructionPage() {
 
         setDateList(data);
       } else {
-        alert('Chưa có danh sách ngày thi mới');
+        alert("Chưa có danh sách ngày thi mới");
       }
     } catch (e) {
-      alert('Lỗi: ' + e);
+      alert("Lỗi: " + e);
     }
   }, []);
 
   return (
     <div className={styles.container}>
-      <TitleBar title='Hướng dẫn dự thi' navigation='driving-test' />
+      <TitleBar title="Hướng dẫn dự thi" navigation="driving-test" />
       <div className={styles.topHeader}>
         <img
-          src='/drivingbanner.jpg'
-          rel='driving banner'
+          src="/drivingbanner.jpg"
+          rel="driving banner"
           className={styles.drivingBanner}
         />
         <div className={styles.introContainerTop}>
           <button
             className={styles.contactButtonTop}
-            onClick={() => history.push('/driving-registration')}
+            onClick={() => history.push("/driving-registration")}
           >
             Đăng ký
           </button>
 
           <a
             className={styles.contactButtonTop}
-            href='https://zalo.me/0383270434'
-            target='_blank'
-            rel='noreferer noreferrer'
+            href="https://zalo.me/0383270434"
+            target="_blank"
+            rel="noreferer noreferrer"
           >
             Hỗ trợ
           </a>
@@ -61,33 +61,33 @@ function DrivingInstructionPage() {
       <div className={styles.wrapper}>
         <div className={styles.header}>
           <h3 className={styles.sectionTitle}>Xem nhanh</h3>
-          <a className={styles.fastTitle} href='#address'>
+          <a className={styles.fastTitle} href="#address">
             Địa điểm
           </a>
-          <a className={styles.fastTitle} href='#fee'>
+          <a className={styles.fastTitle} href="#fee">
             Lệ phí thi
           </a>
-          <a className={styles.fastTitle} href='#date'>
+          <a className={styles.fastTitle} href="#date">
             Ngày thi
           </a>
-          <a className={styles.fastTitle} href='#online'>
+          <a className={styles.fastTitle} href="#online">
             Quy trình đăng ký online
           </a>
-          <a className={styles.fastTitle} href='#offline'>
+          <a className={styles.fastTitle} href="#offline">
             Quy trình đăng ký trực tiếp
           </a>
-          <a className={styles.fastTitle} href='#mocktest'>
+          <a className={styles.fastTitle} href="#mocktest">
             Tài liệu lý thuyết và thi thử thực hành
           </a>
-          <a className={styles.fastTitle} href='#faq'>
+          <a className={styles.fastTitle} href="#faq">
             Các câu hỏi thường gặp
           </a>
-          <a className={styles.fastTitle} href='#contact'>
+          <a className={styles.fastTitle} href="#contact">
             Liên hệ hỗ trợ
           </a>
         </div>
         <div className={styles.body}>
-          <div id='address'>
+          <div id="address">
             <h3 className={styles.sectionTitle}>Địa điểm dự thi</h3>
             <p>Trường đại học thể dục thể thao TP.HCM.</p>
             <p>
@@ -95,7 +95,7 @@ function DrivingInstructionPage() {
               phố Hồ Chí Minh (làng đại học, cạnh nhà điều hành ĐHQG).
             </p>
           </div>
-          <div id='fee'>
+          <div id="fee">
             <h3 className={styles.sectionTitle}>Lệ phí thi</h3>
             <p>
               <strong>Gói A:</strong> 600.000đ (giảm giá sinh viên còn
@@ -117,7 +117,7 @@ function DrivingInstructionPage() {
               khoản.
             </p>
           </div>
-          <div id='date'>
+          <div id="date">
             <h3 className={styles.sectionTitle}>Ngày thi</h3>
             <p>
               Thí sinh chọn ngày dự thi căn cứ theo lịch thi mỗi tháng như sau:
@@ -129,7 +129,7 @@ function DrivingInstructionPage() {
                 })}
             </ul>
           </div>
-          <div id='online'>
+          <div id="online">
             <h3 className={styles.sectionTitle}>Hướng dẫn đăng ký online</h3>
             <p>1. Hoàn thành mẫu đơn đăng ký online bao gồm:</p>
             <ul>
@@ -142,29 +142,29 @@ function DrivingInstructionPage() {
                 không quá trán, vén tóc ra sau mang tai, lấy đủ 2 vai, lấy từ
                 thắt lưng trở lên qua đầu, không đeo kính, trang phục lịch sự,
                 lấy nền tường. Vui lòng không sử dụng filter hay chỉnh sửa làm
-                mất đặc điểm nhận dạng. Xem ảnh mẫu{' '}
+                mất đặc điểm nhận dạng. Xem ảnh mẫu{" "}
                 <a
-                  href='https://i.imgur.com/pfjgD5m.jpg'
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  href="https://i.imgur.com/pfjgD5m.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   tại đây.
                 </a>
                 <br />
-                Tạo ảnh nền xanh từ ảnh chụp trên tại{' '}
+                Tạo ảnh nền xanh từ ảnh chụp trên tại{" "}
                 <a
-                  href='https://www.remove.bg/upload'
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  href="https://www.remove.bg/upload"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://www.remove.bg/upload
                 </a>
                 <br />
-                Xem video hướng dẫn tạo ảnh nền xanh tại{' '}
+                Xem video hướng dẫn tạo ảnh nền xanh tại{" "}
                 <a
-                  href='https://youtu.be/56xW53bxNLg'
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  href="https://youtu.be/56xW53bxNLg"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   https://youtu.be/56xW53bxNLg
                 </a>
@@ -181,14 +181,14 @@ function DrivingInstructionPage() {
                 <br />- Số tiền: 590.000 đồng
                 <br />- Gửi lại ảnh chụp biên lai trong form đăng ký nếu đã
                 chuyển khoản.
-                <br />- Gửi lại ảnh chụp biên lai tại Zalo:{' '}
+                <br />- Gửi lại ảnh chụp biên lai tại Zalo:{" "}
                 <a
-                  href='https://zalo.me/0383270434'
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  href="https://zalo.me/0383270434"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   0383.270.434
-                </a>{' '}
+                </a>{" "}
                 nếu đóng sau khi đăng ký.
               </li>
               <li>
@@ -197,7 +197,7 @@ function DrivingInstructionPage() {
               </li>
               <li>Hoàn thành lệ phí thi trước ngày dự thi 14 ngày.</li>
             </ul>
-            <p style={{ color: 'var(--primary)' }}>
+            <p style={{ color: "var(--primary)" }}>
               <strong>Cảnh báo:</strong> Thí sinh cảnh giác trước các hình thức
               mời chào làm hồ sơ tận nơi, giá rẻ hay mạo danh trung tâm yêu cầu
               chuyển tiền. Trung tâm không chịu trách nhiệm.
@@ -209,14 +209,14 @@ function DrivingInstructionPage() {
                 mọi thủ tục cần hoàn tất trước ngày thi 14 ngày.
               </li>
               <li>
-                Nếu không nhận được thông báo, vui lòng liên hệ di động/Zalo:{' '}
+                Nếu không nhận được thông báo, vui lòng liên hệ di động/Zalo:{" "}
                 <a
-                  href='https://zalo.me/0797324886'
-                  target='_blank'
-                  rel='noopener noreferrer'
+                  href="https://zalo.me/0797324886"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   0797.324.886
-                </a>{' '}
+                </a>{" "}
                 để được hỗ trợ.
               </li>
               <li>
@@ -228,11 +228,11 @@ function DrivingInstructionPage() {
             <ul>
               <li>
                 Trước ngày thi 10 ngày, trung tâm sẽ cập nhật thời gian và danh
-                sách dự thi tại page:{' '}
+                sách dự thi tại page:{" "}
                 <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  href='https://www.facebook.com/daihocquocgia'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/daihocquocgia"
                 >
                   www.facebook.com/daihocquocgia
                 </a>
@@ -244,14 +244,14 @@ function DrivingInstructionPage() {
               </li>
             </ul>
           </div>
-          <div id='offline'>
+          <div id="offline">
             <h3 className={styles.sectionTitle}>Hướng dẫn đăng ký trực tiếp</h3>
             <p>
               Địa điểm: Tại nhà khách ĐHQG. Vui lòng gọi 0383.270.434 (Ms.Thư)
               để hẹn thời gian trước khi đến đăng ký (giờ hành chính).
             </p>
           </div>
-          <div id='mocktest'>
+          <div id="mocktest">
             <h3 className={styles.sectionTitle}>Thi thử</h3>
             <p>Thực hành:</p>
             <ul>
@@ -260,11 +260,11 @@ function DrivingInstructionPage() {
               <li>Ngày thi thử: cùng ngày với lịch thi chính thức.</li>
             </ul>
             <p>
-              Lý thuyết: Thí sinh tải tài liệu học lý thuyết{' '}
+              Lý thuyết: Thí sinh tải tài liệu học lý thuyết{" "}
               <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://drive.google.com/drive/folders/19vo_poKKXdz-tP_ZIgKdGFOwNNYMCxHZ'
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://drive.google.com/drive/folders/19vo_poKKXdz-tP_ZIgKdGFOwNNYMCxHZ"
               >
                 tại đây.
               </a>
@@ -272,7 +272,7 @@ function DrivingInstructionPage() {
           </div>
         </div>
 
-        <div id='faq'>
+        <div id="faq">
           <h3 className={styles.sectionTitle}>Các câu hỏi thường gặp</h3>
           <dl className={styles.faqContainer}>
             <dt>Hỏi: Thời gian nhận bằng là bao lâu?</dt>
@@ -297,20 +297,20 @@ function DrivingInstructionPage() {
           </dl>
         </div>
         <div className={styles.footer}>
-          <p id='contact'>
-            Để được hỗ trợ thêm, vui lòng liên hệ di động/Zalo:{' '}
+          <p id="contact">
+            Để được hỗ trợ thêm, vui lòng liên hệ di động/Zalo:{" "}
             <a
-              href='https://zalo.me/0383270434'
-              target='_blank'
-              rel='noopener noreferrer'
+              href="https://zalo.me/0383270434"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               0383.270.434 (Ms.Thư)
-            </a>{' '}
-            hoặc{' '}
+            </a>{" "}
+            hoặc{" "}
             <a
-              href='https://zalo.me/0797324886'
-              target='_blank'
-              rel='noopener noreferrer'
+              href="https://zalo.me/0797324886"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               0797.324.886 (Mr.Trung)
             </a>
