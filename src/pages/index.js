@@ -23,3 +23,4 @@ export { default as PhotocopyPage } from "./PhotoCopyPage/PhotocopyPage";
 export { default as PhotocopyDetailPage } from "./PhotoCopyPage/DetailPage/PhotocopyDetailPage";
 export { default as PhotocopyInfoPage } from "./PhotoCopyPage/InfoPage/PhotocopyInfoPage";
 export { default as BookGuestHouseStatusPage } from "./BookGuestPage/BookGuestHouseStatusPage";
+export { default as SupportPage } from "./SupportPage/SupportPage";

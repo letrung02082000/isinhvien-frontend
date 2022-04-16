@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.imageContainer img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  background-color: var(--white);
+}
+
+.copyButton {
+  margin: 0 1rem;
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  background-color: rgb(224, 218, 218);
+  border-radius: 5px;
+}

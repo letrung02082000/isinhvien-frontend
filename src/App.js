@@ -25,6 +25,7 @@ import {
   BookGuestHousePage,
   BookGuestHouseStatusPage,
   SwimmingPoolTourPage,
+  SupportPage,
 } from "./pages";
 
 import NotFound from "./pages/NotFound";
@@ -35,7 +36,6 @@ import AccountPage from "./pages/AccountPage";
 import GuestHouseBillPage from "./pages/GuestHouseBillPage";
 import GuestHouseInfoPage from "./pages/GuestHouseInfoPage";
 import QrScanPage from "./pages/QrScanPage";
-import SupportPage from "./pages/SupportPage";
 import MaintainPage from "./pages/MaintainPage";
 import drivingAdminPage from "./admin/DrivingAdminPage";
 import BicycleAdminPage from "./admin/BicycleAdminPage";
