@@ -1,0 +1,13 @@
+.imageContainer {
+  width: 100%;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer img {
+  width: auto;
+  height: 90vh;
+}

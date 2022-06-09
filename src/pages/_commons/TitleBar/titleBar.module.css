@@ -1,0 +1,24 @@
+.titleBar {
+    height: 3rem;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    color: white;
+  }
+  
+  .goBackButton {
+    position: absolute;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0 0.7rem;
+    height: 100%;
+  }
+  
+  .pageTitle {
+    text-align: center;
+    line-height: 3rem;
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+  

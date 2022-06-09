@@ -1,0 +1,81 @@
+.container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.backButton {
+  position: fixed;
+  top: 0.25rem;
+  left: 0.25rem;
+  z-index: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgb(197, 197, 197);
+  opacity: 0.3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.saveButton {
+  /* width: 70%; */
+  background-color: #e93147;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+}
+.saveButton:disabled {
+  background-color: #505050;
+}
+
+.bodyContainer {
+  width: 95%;
+  margin: 2rem auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.couponTitle {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.couponDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.couponDescription h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.loginButton {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+}

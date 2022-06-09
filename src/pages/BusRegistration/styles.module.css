@@ -1,0 +1,101 @@
+.container {
+}
+
+.infoContainer {
+  width: 95%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.uploadContainer {
+  width: 95%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align-items: center; */
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  margin: 1rem 0 0.7rem;
+}
+
+.formInput {
+  padding: 0.5rem;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.formUploadButton {
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  text-align: center;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.formFilename {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.button {
+  border-width: 0;
+  border-radius: 5px;
+  /* background-color: var(--primary); */
+  /* color: white; */
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+}
+
+.formSubmitButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  border-width: 0;
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+}
+
+.photocopyContainer {
+  width: 95%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.photocopyContainer h3 {
+  text-align: center;
+}
+
+.photocopyContainer p {
+  margin: 0.5rem 0;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}

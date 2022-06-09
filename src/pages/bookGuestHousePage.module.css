@@ -1,0 +1,183 @@
+.container {
+  width: 100%;
+}
+
+.titleBar {
+  height: 3rem;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  background-color: rgb(27, 183, 110);
+  color: white;
+}
+
+.goBackButton {
+  position: absolute;
+  background-color: transparent;
+  border-width: 0;
+  padding: 0 0.7rem;
+  height: 100%;
+}
+
+.pageTitle {
+  text-align: center;
+  line-height: 3rem;
+  margin: 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.roomTypeContainer {
+  background-color: white;
+  width: 95%;
+  margin: 1rem auto 0;
+}
+
+.roomTypeTitle {
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.roomTypeOption {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.roomTypeOption div {
+  border: 0.13rem solid rgb(27, 183, 110);
+  width: fit-content;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.roomTypeOptionSelected {
+  background-color: rgb(27, 183, 110);
+  color: white;
+}
+
+.roomTypeOption div p {
+  margin: 0;
+}
+
+.startDateContainer {
+  background-color: white;
+  width: 95%;
+  margin: 0.5rem auto 0;
+}
+
+.startDateTitle {
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.startDateOption {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.startDateOption div {
+  border: 0.13rem solid rgb(27, 183, 110);
+  width: fit-content;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.startDateOption div p {
+  margin: 0;
+}
+
+.startDateOptionSelected {
+  background-color: rgb(27, 183, 110);
+  color: white;
+}
+
+.roomContainer {
+  background-color: white;
+  width: 95%;
+  margin: 0.5rem auto 0;
+}
+
+.roomTitle {
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.roomOptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.roomOption {
+  border: 0.1rem solid rgb(27, 183, 110);
+  width: fit-content;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.roomOption p {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+.roomOption p:first-child {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.roomBooked {
+  border-color: gray;
+  color: gray;
+  cursor: default;
+}
+
+.selectedRoom {
+  background-color: rgb(27, 183, 110);
+  color: white;
+}
+
+.loadMoreButton {
+  border-width: 0;
+  background-color: transparent;
+}
+
+.loadMoreButton span {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.getBillButton {
+  background-color: rgb(27, 183, 110);
+  border-width: 0;
+  border-radius: 50px;
+  padding: 0.7rem 1rem;
+  color: white;
+  font-weight: bold;
+  margin: 2rem;
+}

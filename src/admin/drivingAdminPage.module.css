@@ -1,0 +1,16 @@
+.row {
+  display: flex;
+  border: 1px solid black;
+}
+
+.leftNav {
+  width: 15%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainBoard {
+  width: 85%;
+  border: 1px solid black;
+}

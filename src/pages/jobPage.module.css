@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  background-color: var(--white);
+}
+
+.jobContainer {
+  display: flex;
+  width: 95%;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 16px -1px rgba(0, 36, 33, 0.55);
+  box-shadow: 0px 0px 16px -1px rgba(0, 36, 33, 0.55);
+}
+
+.imageContainer {
+  width: 20%;
+  margin-right: 0.5rem;
+}
+
+.imageContainer img {
+  width: 100%;
+}
+
+.infoContainer {
+  padding-left: 0.5rem;
+}
+
+.infoContainer p {
+  margin: 0.2rem 0;
+}
+
+.jobTitle {
+  font-weight: bold;
+}
+
+.jobState {
+  padding: 0.1rem 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 50px;
+  color: var(--white);
+  background-color: var(--primary);
+  width: fit-content;
+}
+
+.contactButton {
+  margin: 0.5rem 0;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+  background-color: rgb(93, 190, 255);
+  border-width: 0;
+  border-radius: 5px;
+  /* font-weight: bold; */
+}

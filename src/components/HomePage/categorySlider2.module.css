@@ -1,0 +1,19 @@
+.categoryContainer {
+  background-color: transparent;
+  height: 100% !important;
+}
+
+.slideContainer img {
+  width: 100%;
+  height: 5rem;
+}
+
+.slideContainer p {
+  padding: 0;
+  margin: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow: hidden;
+  color: rgb(68, 68, 68);
+}

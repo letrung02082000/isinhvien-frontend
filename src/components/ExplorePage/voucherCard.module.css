@@ -1,0 +1,66 @@
+.card {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0px 2px 5px #aaaaaa;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 11rem;
+  border-radius: 20px;
+}
+
+.cardTitle {
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.cardInfo {
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+}
+.cardVertical {
+  position: relative;
+  width: 85%;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.cardVertical h6 {
+  text-align: center;
+}
+
+.saveButton {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.25rem 1rem;
+  font-size: 14px;
+  font-weight: bold;
+}
+.saveButton:disabled {
+  background-color: #505050;
+}
+
+.conditionButton {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  background-color: #e9af31;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}

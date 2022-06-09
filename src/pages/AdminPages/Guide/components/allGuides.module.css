@@ -1,0 +1,51 @@
+.container {
+  width: 95%;
+  margin: 1rem auto;
+}
+
+.itemContainer {
+  background-color: white;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  display: flex;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+}
+
+.buttonContainer button {
+  background-color: white;
+  border: 1px solid var(--primary);
+  padding: 0.2rem 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+}
+
+.contentContainer {
+  width: 85%;
+}
+
+.content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 9rem;
+}
+
+.pagingContainer {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button {
+  background-color: white;
+  min-width: 2rem;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  margin: 0 1rem;
+}

@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.renewButton {
+  background-color: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.2rem 1rem;
+  border-radius: 5px;
+  margin: 3rem 0;
+}
+
+.logoutButton {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  padding: 0.2rem 1rem;
+  border-radius: 5px;
+  margin: 1rem 0 0;
+}
+
+.bicycleListContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.bicycleItem {
+  background-color: white;
+  color: var(--primary);
+  font-weight: bold;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+}
+
+.bikeUserContainer h5 {
+  text-align: center;
+}
+
+.bikeUserContainer p {
+  text-align: center;
+}

@@ -1,0 +1,49 @@
+.container {
+  padding-top: 3rem;
+}
+
+.reportContainer {
+  background-color: white;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonContainer button {
+  background-color: white;
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid var(--primary);
+  margin: 0.5rem;
+  padding: 0.2rem;
+  min-width: 10rem;
+}
+
+.pagingContainer {
+  position: fixed;
+  top: 0;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0.2rem 0;
+}
+
+.pagingContainer button {
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid var(--primary);
+  padding: 0.2rem 1rem;
+  margin: 0 1rem;
+  min-width: 7rem;
+}

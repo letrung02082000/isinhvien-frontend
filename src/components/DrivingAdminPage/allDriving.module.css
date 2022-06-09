@@ -1,0 +1,76 @@
+.tableHeader {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #ccc;
+  margin: 0.5rem;
+  padding: 0 1rem;
+  border-radius: 5px;
+  background-color: var(--white);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.dateFilter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0.1rem 0;
+}
+
+.dateFilter button {
+  margin: 0.1rem 0.5rem;
+  padding: 0.1rem 0.5rem;
+  min-width: 7rem;
+  border-radius: 50px;
+  background-color: var(--white);
+  border: 2px solid var(--primary);
+}
+
+.tableHeader p {
+  margin: 0;
+  padding: 0.5rem 0;
+  /* text-align: center; */
+  line-height: 1rem;
+  /* color: var(--primary); */
+  background-color: var(--white);
+  font-weight: bold;
+}
+
+.date {
+  width: 10%;
+}
+
+.name {
+  width: 25%;
+}
+
+.tel {
+  width: 10%;
+}
+
+.payment {
+  width: 20%;
+}
+
+.paid {
+  width: 10%;
+}
+
+.processState {
+  width: 20%;
+}
+
+.dateButton {
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+.stateButtonContainer {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,13 @@
+.guideContainer {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: justify;
+    background-color: white;
+    border-radius: 15px;
+
+}
+
+.date {
+    font-size: 0.8rem;
+}

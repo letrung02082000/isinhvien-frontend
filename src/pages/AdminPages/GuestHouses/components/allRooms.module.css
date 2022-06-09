@@ -1,0 +1,103 @@
+.pagingContainer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    padding: 0.2rem 0;
+}
+
+.pagingContainer button {
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+    padding: 0.2rem 1rem;
+    margin: 0 1rem;
+}
+
+.container {
+    margin: 3rem auto;
+    width: 95%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formGroup {
+    width: 100%;
+    max-width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 0.2rem ;
+}
+
+.formLabel {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 0.5rem;
+}
+
+.formInput {
+    width: 100%;
+    padding: 0.1rem 0;
+    text-align: center;
+}
+
+.formButton {
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+
+.roomContainer {
+    background-color: white;
+    padding: 1rem;
+    margin: 0.2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 45%;
+}
+
+.detailInfo {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+
+.buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.buttonGroup button {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+}

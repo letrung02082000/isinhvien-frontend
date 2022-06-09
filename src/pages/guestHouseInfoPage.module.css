@@ -1,0 +1,64 @@
+.container {
+  margin: 0 0 5rem;
+}
+
+.body {
+  width: 95%;
+  max-width: 55rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+
+}
+
+.title {
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #01787A;
+}
+
+.body h3 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: #01787A;
+
+}
+
+.body h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #01787A;
+
+}
+
+.text {
+  text-align: center;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 780px) {
+  .banner {
+    display: none;
+  }
+}
+
+.signupButtonContainer {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.signupButtonContainer button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
+}

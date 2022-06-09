@@ -1,0 +1,72 @@
+.pagingContainer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    padding: 0.2rem 0;
+}
+
+.pagingContainer button {
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+    padding: 0.2rem 1rem;
+    margin: 0 1rem;
+}
+
+.roomsContainer {
+    background-color: white;
+    margin: 5rem auto;
+    width: 95%;
+}
+
+.roomContainer {
+    border: 1px solid var(--primary);
+    padding: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userInfoContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.userInfoContainer div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 1rem;
+    min-width: 15rem;
+}
+
+.userInfoContainer div p {
+    margin: 1rem 0;
+}
+
+.buttonContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttonContainer button {
+    background-color: white;
+    color: var(--primary);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    font-weight: bold;
+    min-width: 10rem;
+
+}

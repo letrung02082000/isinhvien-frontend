@@ -1,0 +1,77 @@
+.hotSliderContainer {
+  display: flex;
+}
+
+.itemContainer {
+  flex: 0 0 50%;
+}
+
+.bannerImg {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.mobileBannerContainer {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.desktopBannerContainer {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.hotItem {
+  height: 7.5rem;
+  border-radius: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hotItemTextContainer {
+  margin-left: 0.7rem;
+}
+
+.hotItemIcon {
+  margin-left: 0.7rem;
+  margin-top: 0.5rem;
+  width: fit-content;
+  background-color: rgb(27, 183, 110);
+  color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0.7rem;
+}
+
+.hotItemText {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.hotItemSubText {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.blurHotItem {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(227, 255, 243, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.guestHouse {
+  background-image: url('https://i.imgur.com/bUpGnbZ.jpg');
+}
+
+.swimmingPool {
+  background-image: url('https://i.imgur.com/FuJMn4D.jpg');
+}

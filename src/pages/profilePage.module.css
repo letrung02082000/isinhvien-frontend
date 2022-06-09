@@ -1,0 +1,45 @@
+.profileContainer {
+  width: 45rem;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+.avatar img{
+  max-height: 300px;
+  object-fit : contain ;
+}
+.avatar, .avatarMobile{
+  padding-left: 1rem;
+}
+.avatarMobile {
+  width: 11rem;
+  height: max-content;
+  display: block;
+  margin: auto auto;
+}
+.avtButton {
+  width: 10rem;
+  margin-top: 0.5rem;
+  align-self: center;
+  justify-self: center;
+}
+.leftInfo {
+  float: none;
+  overflow: hidden;
+}
+.formMobile {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .profileContainer {
+    width: 100%;
+  }
+}

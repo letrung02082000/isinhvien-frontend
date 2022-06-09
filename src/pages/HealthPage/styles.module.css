@@ -1,0 +1,52 @@
+.guideContainer {
+    width: 95%;
+    margin: 1rem auto;
+}
+
+.filterContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+.filterButton {
+    padding: 0.2rem 0.5rem;
+    margin: 0 0.2rem;
+    background-color: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+.selected {
+    background-color: var(--primary);
+}
+
+.guideItemContainer {
+    background-color: white;
+    margin: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.content {
+    max-height: 7rem;
+    overflow: hidden;
+}
+
+.button {
+    border: none;
+    background-color: transparent;
+    color: var(--primary);
+    margin: 1rem 0 0.2rem;
+    text-decoration: underline;
+}
+

@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .pageTitle {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 2.5rem;
+  }
+  
+  .navItems {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .navItem {
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .navItem p {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(65, 179, 154);
+    color: var(--white);
+    font-weight: bold;
+    margin: 0.2rem;
+    padding: 0.7rem 0;
+    border-radius: 5px;
+  }
+  
+  .leftNav {
+    width: 100%;
+    max-width: 12rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+    position: fixed;
+    z-index: 100;
+  }
+
+@media screen and (min-width: 600px) {
+  .leftNav {
+    position: relative;
+  }
+}
+  
+  .mainBoard {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    position: relative;
+  }
+  
+  .showButton {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: var(--primary);
+    border-width: 0;
+    color: white;
+    border-radius: 50%;
+    z-index: 200;
+  }

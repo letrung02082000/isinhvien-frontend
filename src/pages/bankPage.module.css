@@ -1,0 +1,72 @@
+.container {
+}
+
+.header {
+  text-align: center;
+  background-color: white;
+  width: 95%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.mainTitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin: 1rem 0;
+}
+
+.title {
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.bodyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  text-align: justify;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.slideButton {
+  text-decoration: none;
+  background-color: white;
+  padding: 0.2rem;
+  margin: 0.5rem;
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid var(--primary);
+}
+
+.button {
+  text-decoration: none;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 5px;
+  min-width: 10rem;
+  text-align: center;
+  border: 1px solid var(--primary);
+}
+
+.stepContainer {
+  text-align: center;
+}

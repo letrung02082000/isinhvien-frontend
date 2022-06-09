@@ -1,0 +1,59 @@
+.container {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+  
+.formLabel {
+margin: 1rem 0 0.7rem;
+}
+
+.formInput {
+padding: 0.5rem;
+}
+
+.formInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title {
+    margin: 1rem 0;
+}
+
+.roomContainer {
+    border: 1px solid var(--primary);
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 0.5rem 1rem;
+}
+
+.formSubmitButton {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    background-color: var(--primary);
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.categoryDesc {
+    text-align: center;
+    margin: 1rem 0;
+}

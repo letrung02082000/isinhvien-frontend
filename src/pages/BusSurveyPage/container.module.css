@@ -1,0 +1,122 @@
+.dayOfWeek {
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+    background-color: white;
+    color: var(--primary);
+    padding: 0.2rem 1rem;
+    margin: 0.5rem;
+}
+
+.selectedDay {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+    padding: 0.2rem 1rem;
+    margin: 0.5rem;
+}
+
+
+.drivingFormContainer {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem 1rem 5rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formLabel {
+    margin: 1rem 0 0.7rem;
+  }
+  
+  .formInput {
+    padding: 0.5rem;
+  }
+  
+  input[type='file'] {
+    display: none;
+  }
+  
+  .formUploadButton {
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .selectContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .selectContainer p {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    cursor: pointer;
+  }
+  
+  .formFilename {
+    margin: 1rem 0 0;
+  }
+  
+  .formFeedbackInput {
+    height: 5rem;
+    padding: 0.5rem;
+  }
+  
+  .formSubmitButton {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    border-width: 0;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .inTimeContainer {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+.boxGroup {
+    margin: 0.5rem;
+}
+
+.boxGroup input {
+    margin: 0 1rem 0 0;
+}
+
+.formSchool__container {
+  list-style: none;
+
+}
+
+.formSchool__input {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.formSchool__highlight {
+  background-color: #ccc;
+
+}
+
+.formSchool__suggestionList {
+  list-style: none;
+  padding: 0;
+}
+
+.formSchool__suggestion {
+}
